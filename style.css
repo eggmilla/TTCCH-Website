@@ -12,7 +12,7 @@ h1 {
   padding: 2rem;
 }
 .page-title {
-  padding: 10rem 3rem 0rem;
+  padding: 5rem 3rem 0rem;
   font-size: 4rem;
 }
 h2 {
@@ -281,8 +281,7 @@ footer img {
   #shortcuts img {
     width: 10rem;
     height: 10rem;
-    filter: brightness(70%);
-    border-radius: 50%;
+    filter: brightness(100%);
   }
   .page-title {
   padding: 4rem 3rem 0rem;
@@ -335,35 +334,24 @@ footer img {
 }
 .container-image {
   width: 30%;
+  min-width: 250px;
+  flex-wrap: wrap;
 }
 .container-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  flex-wrap: wrap;
 }
 .container-text {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  padding: 3em;
+  padding: 2rem;
   background: #f5e4de;
 }
 
-/* at 940 i want my picture to stay at a certain size */ 
-@media screen and (max:width 800px) {
-  .container-image {
-    width: 100%;
-    flex:1 0 100%;
-  }
-  .container-image img{
-    width: 100%;
-    flex:1 0 100%;
-  }
-  .container-text {
-    flex:1 0 100%;
-  }
-}
 
 /* ------------------------------------------------------- */
 /* How You Can Help */
@@ -457,24 +445,29 @@ button:hover {
   width: 95%;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 1.5rem 0rem 1.5rem 1.5rem;
+  padding: 1.5rem;
 }
 .animal-image {
-  width: 40%;
+  width: 30%;
+  flex-wrap: wrap;
+  min-width: 250px;
 }
 .animal-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  flex-wrap: wrap;
 }
 .animal-text {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  padding: 3em;
+  padding: 0px;
 }
+
 
 /* Widening large text input fields for ADOPTION FORM */
 input[id=info] {
