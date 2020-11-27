@@ -1,28 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
   <body>
     <script src="script.js"></script>
-    <nav class="nav">
-      <ul>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/help.html">How You Can Help</a></li>
-        <li><a href="/learn.html">Learn More</a></li>
+    <header>
+      <a href="/index.html"><img class="logo" src="/logo.png" alt="Til The Cows Come Home Logo"> </a>
+      <nav class="navigation-bar">
+        <a href="/about.html">About Us</a>
+        <a href="/help.html">How You Can Help</a>
+        <a href="/thanks.html">Learn More</a>
+      </nav>
+    </header>
+    <main> 
+      <ul class="breadcrumb">
+        <li><a href="/index.html">Home</a></li>
+        <li>About Us</li>
       </ul>
-	  </nav>
-    <h1> ABOUT PAGE </h1>
-    <h2> work sans test </h2>
-    <p> roboto test </p>
-    <p style="font-weight: 700;">bold roboto test</p>
-    <a href="/help.html">How you can help</a>
+      <section id="why-we-exist">
+        <h1 class="page-title">ABOUT US</h1>
+        <h2>Why we exist</h2>
+        <p>Australia has long had foster homes for people, cats, dogs and wildlife. We thought <em>“Why not farmed animals too?”</em>. Today ‘Til The Cows Come Home is Australia’s leading online adoption agency for farmed animals. We have foster carers across Australia enabling adopters to turn their homes into forever homes for these deserving souls. From ducks to camels, feather, fur or skin we help them all. </p> 
+      </section> 
+      <section id="our-goal">
+        <h2>Our goal</h2>
+        <p>Our mission is to save unwanted farmed animals by working directly with farmers and families to rehome them into loving, forever homes. Our sophisticated adoption process and foster care program together make for a world where people are progressively viewing farmed animals with the same warmth, and to offer the same rights, afforded to domestic pets.</p>
+        <p><strong>Every life that TTCCH touches, we change their world forever.</strong></p>
+      </section> 
+      <section id="who-we-are">
+        <h2>Who we are</h2>
+        <div class="container">
+          <div class="container-image">
+            <img src="/profileimg/cathyB.png" alt="Cathy Blasonato"/>
+          </div>
+          <div class="container-text">
+            <h3>Cathy Blasonato</h3>
+            <p>Cathy has been involved in animal welfare for many years, both as a volunteer and on a professional basis. She spent five years as Supporter Services Manager and Grants Manager for the International Fund for Animal Welfare (AUS.) As well as being a board member for TTCCH she is also on the board of Soi Dog Australia. Cathy is a delegate for the Animal Justice Party (AJP) NSW and a regional group leader. She also stood for the AJP in the 2019 state election in the seat of Ballina.</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container-image">
+            <img src="/profileimg/melissaH.png" alt="Melissa Hobbs"/>
+          </div>
+          <div class="container-text">
+            <h3>Melissa Hobbs</h3>
+            <p>Melissa is a committed animal rights campaigner, and the co-founder of The Vegan Company and Meat Free Week. Some of Melissa’s work in the field of animal welfare includes the strategy for the relaunch of the RSPCA’s Choose Wisely campaign. She has also enjoyed a successful career in magazine publishing, holding senior positions in advertising and strategy at News Limited.</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container-image">
+            <img src="/profileimg/sarahT.png" alt="Sarah Tivendale"/>
+          </div>
+          <div class="container-text">
+            <h3>Sarah Tivendale</h3>
+            <p>Sarah has a passion for animal welfare and has previously worked as a volunteer for ‘Til The Cows Come Home. She has a background in the banking and financial sector that includes work with Morgan’s Financial and the ME Bank as an administration and settlement officer. Her roles with ‘Til The Cows Come Home include managing adoptions and enquiries and working with foster carers to ensure the best possible outcome for re-homed animals.</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container-image">
+            <img src="/profileimg/phobeW.png" alt="Phoebe Wisken"/>
+          </div>
+          <div class="container-text">
+            <h3>Phoebe Wisken</h3>
+            <p>Phoebe has been an animal carer since she was 12 years old. She has previously worked as a volunteer for Animal Welfare League, W.I.R.E.S and Riding for the Disabled. Phoebe is currently training to be a nurse and a midwife. Her knowledge of health care makes her an invaluable part of the team.</p>
+          </div>
+        </div>
+      </section>
 
+    <footer>
+      <address>
+        Contact Us:<br>1800 261 647<br>(02) 9030 0379
+        <br>mkim9153 Milla Kim
+      </address>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/tilthecowscomehomeau/"><img src="/img/facebook.png"></a>
+        <a href="https://www.instagram.com/tilthecowscomehome_/"><img src="/img/instagram.png"></a>
+        <a href="https://twitter.com/tilthecows"> <img src="/img/twitter.png"></a>
+      </div>
+    </footer>
   </body>
 </html>

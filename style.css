@@ -1,74 +1,501 @@
-/* Typography––––––––––––––––––––––––––––––– */
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+/* Typography and Basics */
+p {
+  padding: 0rem 3rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: 'Work Sans', sans-serif;
 }
-
 h1 {
-  font-family: 'Space Mono', monospace;
-  font-size: 47px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  padding: 2rem;
 }
-
+.page-title {
+  padding: 10rem 3rem 0rem;
+  font-size: 4rem;
+}
 h2 {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-weight: bold;
+  padding: 1.5rem 3rem 0rem;
   font-family: 'Work Sans', sans-serif;
-  font-size: 16px
 }
-
 h3 {
-  font-family: 'Space Mono', monospace;
-  font-size: 40px;
-}
-
-
-/* Navigation––––––––––––––––––––––––––––––– */
-
-/* bar */
-nav {
-  overflow: hidden;
-  background-color: rgb(207, 161, 109);
-  position: sticky;
-  width: 100%;
-}
-
-/* reformatting text */
-nav a {
-  float: right;
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding: 0rem 3rem;
   font-family: 'Work Sans', sans-serif;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+}
+blockquote {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2rem;
+  line-height: 40px;
+  padding: 10rem 3rem 10rem;
+  text-align: center;
+}
+body {
+  margin: 0px;
 }
 
-/* reformatting the links in the nav bar */
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-/* visual feedback for hovering over links */
-nav a:hover {
-	color: black;
-	text-decoration: underline;
-  background: #c9a173;
-}
-
-.logo {
-  display: inline-block;
-  vertical-align: top;
-  width: 100px;
-  height: 40px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
+/* Navigation ------------------- */
+header {
+  background: #deeff5;;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-bottom: 2px solid black;
+}
+nav {
+  display: flex;
+  overflow: hidden;
+}
+nav a {
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+  font-size: 1.1rem;
+  padding: 20px;
+  margin: 0;
+  text-decoration: none;
+}
+nav a:hover {
+  background: #b7dce9; 
+  text-decoration: underline;
+}
+/* Setting logo size and position */
+.logo {
+  width: 120px;
+  height: 48px;
+  padding: 5px;
+  vertical-align: top;
+  filter: opacity(0.5) drop-shadow(0 0 0 black);  
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+/* Breadcrumb */
+/* code tweaked from https://www.w3schools.com/howto/howto_css_breadcrumbs.asp */
+.breadcrumb {
+  margin: 0px;
+  border-bottom: 2px solid black;
+}
+ul.breadcrumb {
+  padding: 1rem 1.5rem;
+  list-style: none;
+  background-color: #f5e4de;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 1rem;
+  font-family: 'Work Sans', sans-serif;
+}
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 0.5rem;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+/* Call to action ------------------- */
+.donate-btn {
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: #f5e4de;
+  display: flex;
+  padding: 20px; 
+  position: fixed;
+  top: 80px; 
+  right: 10px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  z-index: 1;
+}
+.donate-btn:hover{
+  text-decoration: underline;
+  background-color: #e9c4b7;
+}
+
+/* Footer ------------------- */
+footer {
+  border-top: 2px solid black;
+  background-color: #deeff5;
+  display: flex;
+  align-items: center;
+}
+address {
+  color: black;
+  font-size: 1rem;
+  padding: 2rem;
+  margin: none;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+}
+.footer-links {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  padding: 0rem 2rem;
+}
+/* Making the icons and links accessible by 'box' rather than precise area */ 
+footer a {
+  display: inline-flex;
+}
+/* Code from https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css */
+/* Changing icon colour when hovering */
+footer img:hover {
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+/* Making the social media icon a static size */
+footer img {
+  padding: 2rem;
+  height: 40px;
+  width: 40px;
+}
+
+/* ------------------------------------------------------- */
+/* Hero Landing Page ------------------- */
+/* Code tweaked from https://codetheweb.blog/fullscreen-image-hero/ */
+#hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* align-items: flex-start; */
+  text-align: center; 
+  background-image: url('https://images.unsplash.com/photo-1561043394-9f7d16d9ae37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* Text box */
+.hero-inner {
+  background: rgb(255, 255, 255, 0.9);
+  padding: 0.5rem;
+}
+#hero h1 {
+  padding: 0rem;
+}
+
+/* Shortcuts */ 
+#shortcuts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-bottom: 10rem;
+  /* background-color: #dee4f5; */
+}
+/* Making clickable boxes */
+#shortcuts a {
+  font-size: 2rem;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center; 
+  padding: 5rem 1rem 5rem;
+  text-decoration: none;
+  z-index: 0;
+  color: black;
+}
+#shortcuts a:hover {
+  text-decoration: underline;
+}
+/* Resizing images */ 
+#shortcuts img {
+  width: 20rem;
+  height: 20rem;
+  filter: brightness(70%);
+  border-radius: 50%;
+}
+/* To make the hover over the image/link more obvious */
+#shortcuts img:hover {
+  filter: brightness(100%);
+}
+
+
+/* Change position of donate button as the nav bar increases in height at 583px*/
+@media screen and (max-width: 583px) {
+  .donate-btn {
+    top: 100px;
+  }
+  footer img {
+    height: 24px;
+    width: 24px;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+  footer a {
+    padding: 0.5rem;
+  }
+}
+/* Responsive for mobile */
+@media screen and (max-width: 450px) {
+  header {
+    display: block;
+  }
+  nav {
+    display: block;
+  }
+  nav a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .logo {
+    width: 90px;
+    height: 36px;
+    padding: 0.5rem;
+    vertical-align: top;
+  }
+  .donate-btn {
+    display: none;
+  }
+  #shortcuts {
+    width: 100%;
+  }
+  #hero h1 {
+    font-size: 1.55rem;
+    line-height: 2rem;
+  }
+  blockquote {
+    font-size: 1.55rem;
+    line-height: 2rem;
+    padding: 5rem 1.5rem 5rem;
+  }
+  #shortcuts a {
+    font-size: 1.5rem;
+    padding: 2.5rem 1.5rem 2.5rem;
+  }
+  /* Resizing images */ 
+  #shortcuts img {
+    width: 10rem;
+    height: 10rem;
+    filter: brightness(70%);
+    border-radius: 50%;
+  }
+  .page-title {
+  padding: 4rem 3rem 0rem;
+  font-size: 3rem;
+  }
+  h2 {
+  font-size: 2rem;
+  padding: 0rem 3rem 0rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.animal-text {
+    padding: 0.5rem;
+  }
+}
+
+/* ------------------------------------------------------- */
+/* About Us ------------------- */ 
+#who-we-are {
+  padding-bottom: 10rem;
+}
+#who-we-are h3 {
+  padding: 0rem 0.5rem 0rem;
+  margin-bottom: 0.5rem;
+}
+#who-we-are p {
+  padding: 0rem 0.5rem 0rem;
+  margin-top: 0rem;
+}
+#will h3 {
+  margin-bottom: 0px;
+}
+#will p {
+  margin-top: 0px;
+}
+
+/* Team profiles */
+/* Code tweaked from https://codepen.io/nxworld/pen/aVyevN */
+.container {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.5rem;
+}
+.container:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.container-image {
+  width: 30%;
+}
+.container-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.container-text {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 3em;
+  background: #f5e4de;
+}
+
+/* at 940 i want my picture to stay at a certain size */ 
+@media screen and (max:width 800px) {
+  .container-image {
+    width: 100%;
+    flex:1 0 100%;
+  }
+  .container-image img{
+    width: 100%;
+    flex:1 0 100%;
+  }
+  .container-text {
+    flex:1 0 100%;
+  }
+}
+
+/* ------------------------------------------------------- */
+/* How You Can Help */
+/* Donation form */
+/* Code tweaked from https://www.w3schools.com/css/css_form.asp */
+form {
+  /* gradient creator from https://cssgradient.io */
+ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(222,239,245,1) 42%, rgba(255,255,255,1) 100%);
+  display: block;
+  padding: 3rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-family: 'Work Sans', sans-serif;  
+}
+form h1 {
+  padding: 0rem;
+}
+
+input[type=text] {
+  width: 315px;
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 1.5rem 0rem;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+}
+input[type=text]:focus {
+  outline: solid #D4B693;
+}
+input[type=number] {
+  width: 315px;
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 1.5rem 0rem;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+}
+input[type=tel] {
+  width: 315px;
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 1.5rem 0rem;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+}
+input[type=text]:focus {
+  outline: solid #D4B693;
+}
+input[type=submit] {
+  float: right;
+  background-color: #f5e4de;
+  color: black;
+  padding: 0.5rem;
+  margin: 0.5rem 0rem 0.5rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 1.75rem;
+  font-family: 'Work Sans', sans-serif;
+}
+input[type=submit]:hover {
+  background-color: #e9c4b7;
+  text-decoration: underline; 
+}
+/* centering the form after a certain breakpoint */
+@media screen and (max-width: 400px) {
+  form {
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+/* FAQ click to reveal button */
+button {
+  margin: 1rem 3rem; 
+  height: 10vh;
+  width: auto;
+  background-color: #f5e4de;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #e9c4b7;
+}
+
+/* ------------------------------------------------------- */
+/* Piglet profile page */
+.animal-profile {
+  width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
+}
+.animal-image {
+  width: 40%;
+}
+.animal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.animal-text {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 3em;
+}
+
+/* Widening large text input fields for ADOPTION FORM */
+input[id=info] {
+  padding-bottom: 10rem;
+  width: 600px;
+}
+
+input[id=contacting] {
+  padding-bottom: 10rem;
+  width: 600px;
+}
+
+@media screen and (max-width: 700px) {
+  input[id=info] {
+    padding-bottom: 20rem;
+    width: 315px;
+  }
+
+  input[id=contacting] {
+    padding-bottom: 20rem;
+    width: 315px;
+  }
 }

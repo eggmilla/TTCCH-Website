@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>TTCCH</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
   <body>
     <script src="script.js"></script>
-    <nav id="nav">
-      <ul>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/help.html">How You Can Help</a></li>
-        <li><a href="/learn.html">Learn More</a></li>
+    <header>
+      <a href="/index.html"><img class="logo" src="/logo.png" alt="Til The Cows Come Home Logo"> </a>
+      <nav class="navigation-bar">
+        <a href="/about.html">About Us</a>
+        <a href="/help.html">How You Can Help</a>
+        <a href="/thanks.html">Learn More</a>
+      </nav>
+    </header>
+    <main> 
+      <ul class="breadcrumb">
+        <li><a href="/index.html">Home</a></li>
+        <li>How You Can Help</li>
       </ul>
-	  </nav>
-    <h1> HOW YOU CAN HELP PAGE </h1>
-    <h2> work sans test </h2>
-    <p> roboto test </p>
-    <p style="font-weight: 700;">bold roboto test</p>
-    <a href="/profiles.html">Profiles</a>
+      <section id="donate">
+        <h1 class="page-title">DONATE</h1>
+        <h2>Save A Life - Donate Now</h2>
+        <p>Every year, millions of unwanted farmed animals suffer an unimaginable fate. These are the forgotten ones. No-one hears their cries.</p> 
+        <p>Most are deemed a waste product of the dairy industry, others are used as egg-laying machines their entire short life, never seeing natural daylight or feeling the sunshine on their feathers.</p> 
+        <p>You can help save and re-home unwanted farmed animals. Their lives are in your hands. No task is too great for our dedicated team. Our extraordinary volunteers are on the frontline every day, facing new challenges and the sad reality of animal neglect. YOU can be there with them by donating now.</p>
+      </section>
+
+      <section id="donation-form">
+        <form>
+          <h1>Donation Form</h1>
+          <label for="fname">First Name</label>
+          <br>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <br>
+          <label for="lname">Last Name</label>
+          <br>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <br>
+          <label for="card">Card Number</label>
+          <br>
+          <input type="number" id="card" name="card" placeholder="XXXX XXXX XXXX XXXX">
+          <br>
+          <label for="amount">Amount</label>
+          <br>
+          <input type="number" id="amount" name="amount" placeholder="20.00">
+          <br>
+          <input type="submit" value="Donate" formaction="/thanks.html">
+          
+        </form>
+      </section>
+
+      <section id="will">
+        <h2>Leave a Lasting Legacy</h2>
+        <p>Farm animals like cows, pigs, chickens and sheep are not protected under any animal cruelty laws. We strive for a world where people view farmed animals with the same warmth, and offer the same rights afforded to domestic pets. Thanks to people like you, we can continue with our mission and in doing so we can facilitate more surrendered animals, open more holding stations, cover vet care costs, purchase feed and upgrade our transport options.</p>
+        <p>No matter the donation or amount you are able to give, we are always grateful for those who support our mission. If you leave a gift to Til the Cows Come Home in your Will, we will give you regular updates into our mission and plans for the future and how your gift will help us achieve them.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        
+        <button type='button' onclick="toggleText()">Click to show questions and answers</button>
+        <p id='demo' style='display: none'><strong>How do I add ‘Til the Cows Come Home to my will?</strong>
+          <br>You usually need our address and charity number – if you have a family solicitor they can easily add it in for you. You can also seek advice from the Fundraising  Institute of Australia here or email them on includeacharity@fia.org.au 
+          <br> Address: 39A Garden Avenue, Mullumbimby NSW <br> Charity number: 62626387273
+          <br>
+          <br>
+          <strong>I already have a will, can I add ‘Til the cows Come Home into it?</strong>
+          <br>If you already have a will, all you need to do is make an amendment known as a codicil to include us as a beneficiary. It is best to seek advice from your legal advisor to do this.
+          <br>
+          <br>
+          <strong>I’ve added ‘Til the Cows Come Home to my will, should I let you know?</strong>
+          <br>Yes, please let us know so we can add you to our emailing list! We love hearing from our supporters, because without them, we would not be able to continue with our mission.
+        </p>
+      </section> 
+
+      <section id="adopt">
+        <h1 class="page-title">ADOPT</h1> 
+        <h2>Adoption Listings</h2>
+      </section> 
+      <section id="shortcuts">
+        <a href="/piglet.html"><img src="/img/piglet.png"><br>Mo</a>
+        <a href="/thanks.html"><img src="/img/cow.png"><br>Caramel</a>
+        <a href="/thanks.html"><img src="/img/horse.png"><br>Dash</a>
+        <a href="/thanks.html"><img src="/img/chickens.png"><br>Chickens</a>
+        </section> 
+      <footer>
+        <address>
+          Contact Us:<br>1800 261 647<br>(02) 9030 0379
+          <br>mkim9153 Milla Kim
+        </address>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/tilthecowscomehomeau/"><img src="/img/facebook.png"></a>
+          <a href="https://www.instagram.com/tilthecowscomehome_/"><img src="/img/instagram.png"></a>
+          <a href="https://twitter.com/tilthecows"> <img src="/img/twitter.png"></a>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
