@@ -225,7 +225,6 @@ footer img {
   filter: brightness(100%);
 }
 
-
 /* Change position of donate button as the nav bar increases in height at 583px*/
 @media screen and (max-width: 583px) {
   .donate-btn {
